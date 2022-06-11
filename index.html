@@ -16,7 +16,7 @@
         <td width="20%">{{productClass.name}}</td>
         <td width="20%">US${{productClass.price.toLocaleString('en-US')}}</td>
         <td>
-            <button style="width: 35%" v-if="productClass.earlyBird">Book Earlybird!</button>
+            <button style="width: 35%" v-if="productClass.earlyBird" onclick="document.getElementById('text').style.display=(document.getElementById('text').style.display=='none')?'block':'none';">Book Earlybird!</button>
             <button style="width: 35%" v-else onclick="document.getElementById('text').style.display=(document.getElementById('text').style.display=='none')?'block':'none';">Book</button>&nbsp;
             
             <span v-show="productClass.seatsAvailable < 10" style="color:red">
